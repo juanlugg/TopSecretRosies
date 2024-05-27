@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tie_nombre_customer_creation">Nombre</string>
+    <string name="tie_apellidos_customer_creation">Apellidos</string>
+    <string name="tie_correo_customer_creation">Correo electrónico</string>
+    <string name="tie_telfono_customer_creation">Teléfono</string>
+    <string name="tie_ciudad_customer_creation">Ciudad</string>
+    <string name="tie_direccion_customer_creation">Dirección</string>
+    <string name="btn_crear_customer_creation">Guardar/Crear</string>
+</resources>

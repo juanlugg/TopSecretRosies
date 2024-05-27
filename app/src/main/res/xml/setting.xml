@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/theme">
+
+        <SwitchPreference
+            android:key="@string/theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:title="@string/theme_dark" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/languaje">
+
+        <SwitchPreference
+            android:key="@string/languaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:enabled="false"
+            android:title="@string/english" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/Order">
+
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/entriesCustomer"
+            android:entryValues="@array/entriesValuesCustomer"
+            android:key="@string/key_customer_order"
+            android:title="@string/list_customer" />
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/entriesItem"
+            android:entryValues="@array/entriesValuesItem"
+            android:key="@string/key_item_order"
+            android:title="@string/list_item" />
+        <ListPreference
+            android:key="@string/key_ivoice_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/entriesInvoice"
+            android:entryValues="@array/entriesValuesInvoice"
+            android:title="@string/list_invoice" />
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="@string/key_task_order"
+            android:entries="@array/entriesTask"
+            android:entryValues="@array/entriesValuesTask"
+            android:title="@string/list_task" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

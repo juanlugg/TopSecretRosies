@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_item"
+    app:startDestination="@id/itemListFragment">
+
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.moronlu18.item.ui.ItemListFragment"
+        android:label="Lista de productos"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_itemCreationFragment"
+            app:destination="@id/itemCreationFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_itemCreationFragment2"
+            app:destination="@id/itemCreationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemCreationFragment"
+        android:name="com.moronlu18.item.ui.ItemCreationFragment"
+        android:label="Creacion de producto"
+        tools:layout="@layout/fragment_item_creation" />
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.moronlu18.item.ui.ItemDetailFragment"
+        android:label="Detalle de producto"
+        tools:layout="@layout/fragment_item_detail" />
+</navigation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtdInvoiceCreationCliente">18sp</dimen>
+    <dimen name="dimenSeparacionLista">10dp</dimen>
+    <dimen name="txtdInvoiceDetailsCliente">18sp</dimen>
+    <dimen name="rbInvoiceDetails">5dp</dimen>
+    <dimen name="AnchoDetails">83dp</dimen>
+    <dimen name="sizeLab">19sp</dimen>
+    <dimen name="sizeContent">16sp</dimen>
+    <dimen name="AnchoFecha">210dp</dimen>
+    <dimen name="sizeSecondLab">15sp</dimen>
+    <dimen name="sizeSecondContent">14sp</dimen>
+</resources>

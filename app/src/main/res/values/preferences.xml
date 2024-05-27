@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="entriesCustomer">
+        <item>Ordenar por ID</item>
+        <item>Ordemar por Nombre</item>
+    </array>
+    <array name="entriesValuesCustomer">
+        <item>Id</item>
+        <item>Nombre</item>
+    </array>
+    <array name="entriesInvoice">
+        <item>Ordenar por ID</item>
+        <item>Ordemar por Nombre de Cliente</item>
+    </array>
+    <array name="entriesValuesInvoice">
+        <item>Id</item>
+        <item>No</item>
+    </array>
+
+    <array name="entriesItem">
+        <item>Ordenar por nombre de producto</item>
+        <item>Ordenar por precio</item>
+    </array>
+    <array name="entriesValuesItem">
+        <item>Name</item>
+        <item>Rate</item>
+    </array>
+    <string-array name="entriesTask">
+        <item>Ordenar por ID</item>
+        <item>Ordenar por Cliente</item>
+    </string-array>
+    <string-array name="entriesValuesTask">
+        <item>Id</item>
+        <item>Customer</item>
+    </string-array>
+
+</resources>

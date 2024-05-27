@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_customer"
+    app:startDestination="@id/customerListFragment2">
+
+    <fragment
+        android:id="@+id/customerListFragment2"
+        android:name="com.moronlu18.customerun.ui.CustomerListFragment"
+        android:label="Lista Clientes"
+        tools:layout="@layout/fragment_customer__list_" >
+        <action
+            android:id="@+id/action_customerListFragment_to_customerCreationFragment2"
+            app:destination="@id/customerCreationFragment" />
+        <action
+            android:id="@+id/action_customerListFragment_to_customerDetailFragment2"
+            app:destination="@id/customerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerCreationFragment"
+        android:name="com.moronlu18.customerun.ui.CustomerCreationFragment"
+        android:label="Creacion Cliente" />
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.moronlu18.customerun.ui.CustomerDetailFragment"
+        android:label="Datos Cliente"
+        tools:layout="@layout/fragment_customer_detail" />
+</navigation>

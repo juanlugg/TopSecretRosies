@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="InvoiceCreationtxtCliente">Curtomer:</string>
+    <string name="hello_blank_fragment">Hello fragment</string>
+    <string name="tieInvoiceCreationNombre">Name:</string>
+    <string name="tieInvoiceCreationEmail">Email:</string>
+    <string name="tieÍnvoiceCreationTelefono">Phone:</string>
+    <string name="txtInvoiceCreationFecha">Date</string>
+    <string name="tieInvoicecreationFeEmision">Date of issue:</string>
+    <string name="tieInvoiceCreationFeVencimiento">Due date;</string>
+    <string name="txtInvoiceCreationArticulos">Item</string>
+    <string name="btnInvoiceCreationArticulos">Add Item</string>
+    <string name="txtInvoiceCreationLabSubTotal">Subtotal</string>
+    <string name="txtInvoiceCreationSubTotal">100</string>
+    <string name="tieFormatoFecha">YYYY-MM-DD</string>
+    <string name="tvInvoiceCreationImpuestos">Taxes:</string>
+    <string name="tvInvoiceCreation">Total:</string>
+    <string name="tvListaArticulosLabPrecio">Price:</string>
+    <string name="tvListaArticulosPrecio">20.1</string>
+    <string name="tvListaArticulosNombre">Shoe</string>
+    <string name="tvListaArticulosLabNombre">Name:</string>
+    <string name="txtInvoiceDetailsCliente">Customer</string>
+    <string name="tieInvoiceDetailsNombre">Name:</string>
+    <string name="txtInvoiceDetailsLabNombre">Name:</string>
+    <string name="txtInvoiceDetailsLabEmail">Email:</string>
+    <string name="txtInvoiceDetailsLabTelefono">Phone:</string>
+    <string name="txtInvoiceDetailsFecha">Fecha</string>
+    <string name="txtInvoiceDetailsLabFeEmision">Date of issue:</string>
+    <string name="txtInvoiceDetailsLabFeVencimiento">Due date;</string>
+    <string name="txtIncoiceDetailsArticulos">item</string>
+    <string name="txtInvoiceDetailsLabSubTotal">SubTotal:</string>
+    <string name="txtInvoiceDetailsLabImpuestos">Taxes:</string>
+    <string name="txtInvoiceDetailsLabTotal">Total:</string>
+    <string name="rbInvoiceCreationPendiente">"Pending "</string>
+    <string name="rbInvoiceDetailsPagada">Paid</string>
+    <string name="rbInvoiceDetailsVencida">Overdue</string>
+    <string name="InvoiceImpustos">21 %</string>
+    <string name="tvInvoiceCreationLabTelefono">Phone:</string>
+    <string name="tvInvoiceCreationLabEmail">Email:</string>
+    <string name="tvInvoiceCreationLabCliente">Customer:</string>
+    <string name="tvInvoiceCreationfactura">Invoice</string>
+    <string name="hInvoiceCreationIdFactura">Invoice id</string>
+    <string name="hInvoiceCreationIdCliente">Customer id</string>
+    <string name="nombre">Name</string>
+
+
+</resources>

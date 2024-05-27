@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtnombre_customer_list">Name</string>
+    <string name="txtapellidos_customer_list">Surnames</string>
+    <string name="txv_customer_detail">PERSONAL DATA</string>
+    <string name="txvnombre_customer_detail">Name:</string>
+    <string name="txvdatoscontacto_customer_detail">CONTACT DATA</string>
+    <string name="txvtelefono_customer_detail">phone:</string>
+    <string name="txvubicaion_customer_detail">LOCATION</string>
+    <string name="txvciudad_customer_detail">City:</string>
+    <string name="txvdireccion_customer_detail">Direction:</string>
+    <string name="tie_nombre_customer_creation">Nama</string>
+    <string name="tie_apellidos_customer_creation">Surnames</string>
+    <string name="tie_correo_customer_creation">Email</string>
+    <string name="tie_telfono_customer_creation">Phone</string>
+    <string name="tie_ciudad_customer_creation">City</string>
+    <string name="tie_direccion_customer_creation">Direction</string>
+    <string name="btn_crear_customer_creation">Save/Create</string>
+    <string name="txt_customercreation">Empty List</string>
+</resources>

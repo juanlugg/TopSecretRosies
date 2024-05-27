@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_customer"
+        android:title="Customer"
+        android:icon="@drawable/baseline_person_2_24"/>
+    <item
+        android:id="@+id/action_invoice"
+        android:title="Invoice"
+        android:icon="@drawable/baseline_fact_check_24"/>
+    <item
+        android:id="@+id/action_item"
+        android:title="Item"
+        android:icon="@drawable/baseline_reorder_24"/>
+    <item
+        android:id="@+id/action_task"
+        android:title="Task"
+        android:icon="@drawable/baseline_mark_chat_read_24"/>
+</menu>

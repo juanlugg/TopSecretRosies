@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.moronlu18.invoice.usecase.InvoiceDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.InvoiceDetailsFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+            app:contentPadding="10dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInvoiceDetailsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/tvInvoiceCreationfactura"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/txtdInvoiceDetailsCliente"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsName2"
+                        android:layout_width="@dimen/AnchoDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabNombre"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsNombreF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFactura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+            app:cardCornerRadius="20dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCliente">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInvoiceDetailsCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/txtInvoiceDetailsCliente"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/txtdInvoiceDetailsCliente"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetails1"
+                        android:layout_width="@dimen/AnchoDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabNombre"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetails2"
+                        android:layout_width="@dimen/AnchoDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabEmail"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsTelefonoid"
+                        android:layout_width="@dimen/AnchoDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabTelefono"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsTelefono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvFactura">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInvoiceCreationFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtInvoiceDetailsFecha"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/txtdInvoiceDetailsCliente"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetails4"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:layout_width="@dimen/AnchoFecha"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/txtInvoiceDetailsLabFeEmision"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsFechaEmision"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetails5"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:layout_width="@dimen/AnchoFecha"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/txtInvoiceDetailsLabFeVencimiento"
+                        android:textSize="@dimen/sizeLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsFechaVencimiento"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text=""
+                        android:textSize="@dimen/sizeContent" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="56dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <RadioGroup
+                android:id="@+id/rbInvoiceCreation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbInvoiceDetailsPendiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/rbInvoiceDetails"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/rbInvoiceCreationPendiente" />
+
+                <RadioButton
+                    android:id="@+id/rbInvoiceDetailsPagada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/rbInvoiceDetails"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/rbInvoiceDetailsPagada" />
+
+                <RadioButton
+                    android:id="@+id/rbInvoiceDetailsPagadaVencida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/rbInvoiceDetails"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/rbInvoiceDetailsVencida" />
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+            app:contentPadding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInvoiceCreationArticulos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                    android:text="@string/txtIncoiceDetailsArticulos"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/txtdInvoiceDetailsCliente"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInvoiceDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailslblSubtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabSubTotal"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/sizeSecondLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsSubtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:paddingStart="6dp"
+
+                        android:text=""
+                        android:textSize="@dimen/sizeSecondContent" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailslblImpuestos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabImpuestos"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/sizeSecondLab"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsImpuestos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:paddingStart="6dp"
+                        android:text=""
+                        android:textSize="@dimen/sizeSecondContent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsLabTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:text="@string/txtInvoiceDetailsLabTotal"
+                        android:textAlignment="textEnd"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDetailsTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:paddingStart="6dp"
+                        android:text=""
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

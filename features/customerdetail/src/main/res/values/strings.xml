@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="txv_customer_detail">DATOS PERSONALES</string>
+    <string name="txvnombre_customer_detail">Nombre :</string>
+    <string name="txvid_customer_detail" >Id :</string>
+    <string name="txvdatoscontacto_customer_detail">DATOS CONTACTO</string>
+    <string name="txvemail_customer_detail">Email :</string>
+    <string name="txvtelefono_customer_detail" >Teléfono :</string>
+    <string name="txvubicaion_customer_detail">UBICACIÓN</string>
+    <string name="txvciudad_customer_detail">Ciudad :</string>
+    <string name="txvdireccion_customer_detail" >Dirección :</string>
+</resources>

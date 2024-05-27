@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.moronlu18.task.usecase.TaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TaskCreationFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glIzqTaskCreation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/clTaskWidth" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glDerTaskCreation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/clTaskWidth" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glUpTaskCreation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/clTaskHeight" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glDownTaskCreation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/clTaskHeight" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTaskCreationPrincipal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/md_theme_light_primaryContainer"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="@dimen/clTaskWidth"
+            app:layout_constraintBottom_toTopOf="@+id/glDownTaskCreation"
+            app:layout_constraintEnd_toStartOf="@+id/glDerTaskCreation"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/glIzqTaskCreation"
+            app:layout_constraintTop_toTopOf="@+id/glUpTaskCreation"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/spTaskCreationCustomer"
+                    android:layout_width="@dimen/spTaskCreationCustomerWidth"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_spinner"
+                    android:selectedItemPosition="@={viewmodel.idCustomer}"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskCreationTitle"
+                    style="@style/TextColorTaskDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@id/spTaskCreationCustomer">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskCreationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:hint="@string/txtTaskTitle"
+                        android:inputType="textShortMessage"
+                        android:text="@={viewmodel.title}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskCreationDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilTaskCreationTitle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskCreationDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tieTaskCreationDescHeight"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:gravity="top"
+                        android:hint="@string/tieTaskCreationDescripcion"
+                        android:inputType="text"
+                        android:text="@={viewmodel.description}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskCreationDateStart"
+                    android:layout_width="@dimen/tieTaskCreationFechaWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilTaskCreationDesc"
+                    app:startIconDrawable="@drawable/icon_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskCreationDateStart"
+                        android:layout_width="@dimen/tieTaskCreationFechaWidth"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:hint="@string/txtTaskDateStart"
+                        android:inputType="date"
+                        android:text="@={viewmodel.createdDate}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskCreationDateEnd"
+                    android:layout_width="@dimen/tieTaskCreationFechaWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:errorEnabled="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilTaskCreationDateStart"
+                    app:startIconDrawable="@drawable/icon_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskCreationDateEnd"
+                        android:layout_width="@dimen/tieTaskCreationFechaWidth"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                        android:hint="@string/txtTaskDateEnd"
+                        android:inputType="date"
+                        android:text="@={viewmodel.endDate}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spTaskCreationType"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/shape_spinner"
+                    android:selectedItemPosition="@={viewmodel.typeSelected}"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tilTaskCreationDateStart"
+                    app:layout_constraintTop_toBottomOf="@+id/tilTaskCreationDesc" />
+
+                <Spinner
+                    android:id="@+id/spTaskCreationStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/shape_spinner"
+                    android:selectedItemPosition="@={viewmodel.statusSelected}"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tilTaskCreationDateEnd"
+                    app:layout_constraintTop_toBottomOf="@+id/spTaskCreationType" />
+
+                <Button
+                    android:id="@+id/btnTaskCreationAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:fontFamily="@font/opensans_condensed_bold"
+                    android:onClick="@{()->viewmodel.validate()}"
+                    android:text="@string/btnTaskCreationAccept"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!-- Se nombra directamente al Fragment. La propiedad android:name da error
+    porque el Fragmento no está en app y es en tiempo de ejecución cuando el módulo se une al
+    fichero apk-->
+    <fragment
+        app:moduleName="accountsignin"
+        android:label="@string/title_accountsigin"
+        android:id="@+id/accountSignInFragment"
+        android:name="com.moronlu18.accountsignin.ui. AccountSignIn" />
+    <fragment
+        app:moduleName="accountsignup"
+        android:label="@string/title_accountsignup"
+        android:id="@+id/accountSignUpFragment"
+        android:name="com.moronlu18.accountsignup.ui.AccountSignUp" >
+        <action
+            android:id="@+id/action_accountSignUpFragment_to_baseFragmentDialog"
+            app:destination="@id/baseFragmentDialog" />
+        <action
+            android:id="@+id/action_accountSignUpFragment_to_fragmentProgressDialog"
+            app:destination="@id/fragmentProgressDialog" />
+    </fragment>
+    <fragment
+        app:moduleName="invoice"
+        android:label="@string/title_invoicelist"
+        android:id="@+id/invoiceFragment"
+        android:name="com.moronlu18.invoice.ui.InvoiceListFragment" />
+
+    <fragment
+        app:moduleName="item"
+        android:label="@string/title_itemlist"
+        android:id="@+id/itemFragment"
+        android:name="com.moronlu18.item.ui.ItemListFragment" />
+
+    <fragment
+        app:moduleName="task"
+        android:label="@string/title_tasklist"
+        android:id="@+id/taskFragment"
+        android:name="com.moronlu18.task.ui.TaskListFragment" />
+
+    <fragment
+        app:moduleName="customer"
+        android:label="@string/title_customerlist"
+        android:id="@+id/customerFragment"
+        android:name="com.moronlu18.customerun.ui.CustomerListFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.moronlu18.invoice.MainFragment"
+        android:label="@string/mainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_featureAccountSignIn"
+            app:destination="@+id/accountSignInFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_featureAccountSignUp"
+            app:destination="@+id/accountSignUpFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_invoiceFragment"
+            app:destination="@id/invoiceFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_invoice"
+            app:destination="@id/nav_graph_invoice"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_item"
+            app:destination="@id/nav_graph_item" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_task"
+            app:destination="@id/nav_graph_task" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_customer"
+            app:destination="@id/nav_graph_customer" />
+    </fragment>
+    <!--Se incluye el grafo de navegacion con un id = "@+id" que se ha establecido en el fichero /res/navegation/
+    SOLO SE AÑADE EL + EN ESTE CODIGO-->
+    <include-dynamic
+        android:id="@+id/nav_graph_invoice"
+        app:graphPackage="${applicationId}.invoice"
+        app:graphResName="nav_graph_invoice"
+        app:moduleName="invoice"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_customer"
+        app:graphPackage="${applicationId}.customerun"
+        app:graphResName="nav_graph_customer"
+        app:moduleName="customerun"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_item"
+        app:graphPackage="${applicationId}.item"
+        app:graphResName="nav_graph_item"
+        app:moduleName="item"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_task"
+        app:graphPackage="${applicationId}.task"
+        app:graphResName="nav_graph_task"
+        app:moduleName="task"/>
+    <dialog
+        android:id="@+id/baseFragmentDialog"
+        android:name="com.moronlu18.invoice.ui.base.BaseFragmentDialog"
+        android:label="BaseFragmentDialog" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/fragmentProgressDialog"
+        android:name="com.moronlu18.invoice.ui.base.FragmentProgressDialog"
+        android:label="FragmentProgressDialog" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.signup.ui.preferences.SettingsFragment"
+        android:label="SettingsFragment" />
+
+
+</navigation>

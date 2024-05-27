@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="clTaskWidth">15dp</dimen>
+    <dimen name="clTaskHeight">50dp</dimen>
+    <dimen name="ivTaskList">60dp</dimen>
+    <dimen name="textSizeTaskList">15dp</dimen>
+    <dimen name="spTaskCreationCustomerWidth">200dp</dimen>
+    <dimen name="tieTaskCreationDescHeight">150dp</dimen>
+    <dimen name="tvTaskDetailDescHeight">120dp</dimen>
+    <dimen name="tieTaskCreationFechaWidth">170dp</dimen>
+    <dimen name="marginTopTaskDetail">8dp</dimen>
+    <dimen name="marginStartTaskDetail">16dp</dimen>
+    <dimen name="textSizeTaskDetail">18dp</dimen>
+    <dimen name="spHoraWidthTaskCreation">100dp</dimen>
+    <dimen name="spHoraHeightTaskCreation">50dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextColorTaskDetail">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="datePickerTheme" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:background">@color/md_theme_light_primary</item>
+    </style>
+</resources>

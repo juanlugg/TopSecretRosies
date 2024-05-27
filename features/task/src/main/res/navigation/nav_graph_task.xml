@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_task"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.moronlu18.task.ui.TaskListFragment"
+        android:label="@string/title_tasklist">
+        <action
+            android:id="@+id/action_taskListFragment_to_taskCreationFragment"
+            app:destination="@id/taskCreationFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskCreationFragment"
+        android:name="com.moronlu18.task.ui.TaskCreationFragment"
+        android:label="@string/title_taskcreation" />
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.moronlu18.task.ui.TaskDetailFragment"
+        android:label="@string/title_taskdetail" />
+</navigation>

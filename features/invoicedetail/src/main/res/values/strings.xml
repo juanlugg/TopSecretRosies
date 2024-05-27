@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="txtInvoiceDetailsCliente">Cliente</string>
+    <string name="tieInvoiceDetailsNombre">Nombre:</string>
+    <string name="txtInvoiceDetailsLabNombre">Nombre:</string>
+    <string name="txtInvoiceDetailsNombre" />
+    <string name="txtInvoiceDetailsLabEmail">Email:</string>
+    <string name="txtInvoiceDetailsEmail" />
+    <string name="txtInvoiceDetailsTelefono"></string>
+    <string name="txtInvoiceDetailsLabTelefono">Teléfono:</string>
+    <string name="txtInvoiceDetailsFecha">Fecha</string>
+    <string name="txtInvoiceDetailsFeEmision"></string>
+    <string name="txtInvoiceDetailsLabFeEmision">Fecha de Emisión :</string>
+    <string name="txtInvoiceDetailsLabFeVencimiento">Fecha de Vencimiento :</string>
+    <string name="txtInvoiceDetailsFeVencimiento" />
+    <string name="txtIncoiceDetailsArticulos">Articulos</string>
+    <string name="txtInvoiceDetailsLabSubTotal">SubTotal:</string>
+    <string name="txtInvoiceDetailsSubTotal" />
+    <string name="txtInvoiceDetailsImpuestos"></string>
+    <string name="txtInvoiceDetailsLabImpuestos">Impuestos:</string>
+    <string name="txtInvoiceDetailsLabTotal">Total: </string>
+    <string name="txtInvoiceDetailsTotal" />
+    <string name="rbInvoiceCreationPendiente">Pendiente</string>
+    <string name="rbInvoiceDetailsPagada">Pagada</string>
+    <string name="rbInvoiceDetailsVencida">Vencida</string>
+    <string name="tvListaArticulosLabPrecio">Precio:</string>
+    <string name="tvListaArticulosPrecio">20.1</string>
+    <string name="tvListaArticulosNombre">Zapato</string>
+    <string name="tvListaArticulosLabNombre">Nombre:</string>
+</resources>

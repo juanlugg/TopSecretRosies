@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="InvoiceCreationtxtCliente">Cliente</string>
+    <string name="tieInvoiceCreationNombre">Nombre:</string>
+    <string name="tieInvoiceCreationEmail">Email:</string>
+    <string name="tieÍnvoiceCreationTelefono">Teléfono:</string>
+    <string name="txtInvoiceCreationFecha">Fecha</string>
+    <string name="tieInvoicecreationFeEmision">Fecha de Emisión:</string>
+    <string name="tieInvoiceCreationFeVencimiento">Fecha de Vencimiento</string>
+    <string name="txtInvoiceCreationArticulos">Artículos</string>
+    <string name="btnInvoiceCreationArticulos">Añadir Articulo</string>
+    <string name="txtInvoiceCreationLabSubTotal">Subtotal:</string>
+    <string name="txtInvoiceCreationSubTotal">100</string>
+    <string name="tieFormatoFecha">DD/MM/YYYY</string>
+    <string name="tvInvoiceCreationImpuestos">Impuestos:</string>
+    <string name="tvInvoiceCreation">Total:</string>
+    <string name="tvListaArticulosLabPrecio">Precio:</string>
+    <string name="tvListaArticulosPrecio">20.1</string>
+    <string name="tvListaArticulosNombre">Zapato</string>
+    <string name="tvListaArticulosLabNombre">Nombre:</string>
+
+
+</resources>

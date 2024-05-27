@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.moronlu18.invoice.usecase.InvoiceViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.InvoiceCreationFragment"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCrear"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="Confirmar"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3"
+                    android:onClick="@{()->viewmodel.validate()}"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_primaryContainer"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtInvoiceCreationArticulos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                            android:text="@string/txtInvoiceCreationArticulos"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txtdInvoiceCreationCliente"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spArticulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp" />
+
+                        <Button
+                            android:id="@+id/btnArticulos"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginHorizontal="60dp"
+                            android:backgroundTint="@color/md_theme_light_primary"
+                            android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                            android:text="@string/btnInvoiceCreationArticulos" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvInvoiceArticulos"
+                            android:layout_width="match_parent"
+                            android:layout_height="135dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceCreationLabSubTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/txtInvoiceCreationLabSubTotal"
+                                    android:textAlignment="textEnd" />
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceCreationSubtotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:maxLength="10"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:paddingStart="6dp"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceDetailslblImpuestos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:text="@string/tvInvoiceCreationImpuestos"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceCreationImpuestos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:paddingStart="6dp"
+                                    android:text="@string/InvoiceImpustos"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+
+                                android:background="@color/md_theme_light_primaryContainer"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceDetailsLabTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:text="@string/tvInvoiceCreation"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="19sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtInvoiceCreationTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:paddingStart="6dp"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvCliente">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_primaryContainer"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtInvoiceCreationFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txtInvoiceCreationFecha"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txtdInvoiceCreationCliente"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilInvoiceFeEmi"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:focusable="false"
+                                app:errorEnabled="true"
+                                app:helperText="@string/tieFormatoFecha"
+                                app:startIconDrawable="@drawable/icon_calendar">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tieInvoiceFeEmi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:focusable="false"
+
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:hint="@string/tieInvoicecreationFeEmision"
+                                    android:text="@={viewmodel.feEmi}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilInvoiceCreationFeVen"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:clickable="false"
+
+                                android:focusable="false"
+                                app:errorEnabled="true"
+                                app:helperText="@string/tieFormatoFecha"
+                                app:startIconDrawable="@drawable/icon_calendar">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tieInvoiceCreationFeVen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+
+                                    android:hint="@string/tieInvoiceCreationFeVencimiento"
+                                    android:text="@={viewmodel.feVen}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvFactura">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_primaryContainer"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtInvoiceCreationCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/InvoiceCreationtxtCliente"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/txtdInvoiceCreationCliente"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilInvoiceCreationIdCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/nombre">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tieInvoiceCreationIdCliente"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@={viewmodel.idCliente}"
+                                android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                android:hint="@string/hInvoiceCreationIdCliente"
+                                android:inputType="text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/md_theme_light_tertiary"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationLabNombre"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingEnd="4dp"
+                                        android:text="@string/tvInvoiceCreationLabCliente"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="@color/nadab" />
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationNombre"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="@={viewmodel.nombreCliente}"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationLabEmail"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingEnd="4dp"
+                                        android:text="@string/tvInvoiceCreationLabEmail"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="@color/nadab" />
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationEmail"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="@={viewmodel.email}"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationLabTelefono"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingEnd="4dp"
+                                        android:text="@string/tvInvoiceCreationLabTelefono"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="@color/nadab" />
+
+                                    <TextView
+                                        android:id="@+id/tvInvoiceCreationTelefono"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="@={viewmodel.telefono}"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFactura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardBackgroundColor="@color/md_theme_light_primaryContainer"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/md_theme_light_primaryContainer"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtInvoiceCreationFactura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tvInvoiceCreationfactura"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/txtdInvoiceCreationCliente"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilInvoiceCreationIdFactura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/nombre">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tieInvoiceCreationIdFactura"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:hint="@string/hInvoiceCreationIdFactura"
+                                    android:inputType="text"
+                                    android:text="@={viewmodel.idFactura}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/md_theme_light_primaryContainer"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNameInvoiceCreationFactura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/nombre"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/txtdInvoiceCreationCliente"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilNameInvoiceCreationIdFactura"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/nombre">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tieNameInvoiceCreationIdFactura"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_variablefont_wdth_wght"
+                                    android:hint="Nombre "
+                                    android:inputType="text"
+                                    android:text="@={viewmodel.name}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Para confirmar la acción realiza un scroll hacia abajo"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

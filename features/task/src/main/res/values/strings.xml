@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtTaskTitle">Titulo</string>
+    <string name="txtTaskCustomer">Cliente</string>
+    <string name="txtTaskDateStart">Inicio</string>
+    <string name="txtTaskDateEnd">Fin</string>
+    <string name="abTaskCreationName">TAREA</string>
+    <string name="tieTaskCreationDescripcion">Descripción</string>
+    <string name="btnTaskCreationAccept">ACEPTAR</string>
+    <string name="tvTaskDetailCliente">CLIENTE:</string>
+    <string name="tvTaskDetailDesc">DESCRIPCIÓN:</string>
+    <string name="tvTaskDetailDateStart">FECHA INICIO:</string>
+    <string name="tvTaskDetailDateEnd">FECHA FIN:</string>
+    <string name="tvTaskDetailType">TIPO:</string>
+    <string name="tvTaskDetailState">ESTADO:</string>
+    <string name="refreshMenuTask">Recargar</string>
+    <string name="sortMenuTask">Ordenar</string>
+</resources>

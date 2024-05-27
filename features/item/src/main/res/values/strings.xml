@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="item_types">
+        <item>Producto</item>
+        <item>Servicio</item>
+    </string-array>
+
+
+    <string name="tvid">ID</string>
+    <string name="tvName">Nombre</string>
+    <string name="tvRate">Tasa</string>
+    <string name="tvType">Tipo</string>
+    <string name="tvDescription">Descripcion</string>
+    <string name="chbIsTaxable">Es imponible</string>
+</resources>

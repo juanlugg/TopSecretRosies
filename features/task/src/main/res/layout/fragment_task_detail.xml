@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TaskDetailFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glIzqTaskDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/clTaskWidth" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDerTaskDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/clTaskWidth" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glUpTaskDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDownTaskDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="50dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/llTaskDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/md_theme_light_primaryContainer"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/glDownTaskDetail"
+        app:layout_constraintEnd_toStartOf="@+id/glDerTaskDetail"
+        app:layout_constraintStart_toStartOf="@+id/glIzqTaskDetail"
+        app:layout_constraintTop_toTopOf="@+id/glUpTaskDetail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierTaskDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="tvTaskDetailCliente, tvTaskDetailDateEnd,tvTaskDetailDateStart, tvTaskDetailState" />
+
+            <ImageView
+                android:id="@+id/ivIcono"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/icon_taskoverdue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="TITULO"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivIcono" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailCliente"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailTitle" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailClienteCont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/md_theme_light_outlineVariant"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="Juan Luis Guerra Gennich"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailCliente" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailDesc"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailClienteCont" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDescCont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tvTaskDetailDescHeight"
+                android:background="@color/md_theme_light_outlineVariant"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="Descripción de ejemplo"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDesc" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDateStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailDateStart"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDescCont" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDateStartCont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartTaskDetail"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="01/01/2000"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+
+                app:layout_constraintStart_toEndOf="@+id/barrierTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDescCont" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDateEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailDateEnd"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDateStart" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailDateEndCont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartTaskDetail"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="31/12/2023"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintStart_toEndOf="@+id/barrierTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDateStartCont" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailType"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaskDetailDateEnd" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailTypeCont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartTaskDetail"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="PRIVADO"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintStart_toEndOf="@+id/barrierTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailDateEndCont" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_condensed_bold"
+                android:text="@string/tvTaskDetailState"
+                android:textColor="@color/md_theme_dark_onPrimary"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaskDetailType" />
+
+            <TextView
+                android:id="@+id/tvTaskDetailStateCont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartTaskDetail"
+                android:layout_marginTop="@dimen/marginTopTaskDetail"
+                android:fontFamily="@font/opensans_italic_variablefont_wdth_wght"
+                android:text="PENDIENTE"
+                android:textColor="@color/md_theme_dark_background"
+                android:textSize="@dimen/textSizeTaskDetail"
+                app:layout_constraintStart_toEndOf="@+id/barrierTaskDetail"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDetailTypeCont" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

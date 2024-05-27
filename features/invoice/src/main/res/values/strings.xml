@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_blank_fragment">Hola fragment</string>
+    <string name="InvoiceCreationtxtCliente">Cliente:</string>
+    <string name="tieInvoiceCreationNombre">Nombre:</string>
+    <string name="tieInvoiceCreationEmail">Email:</string>
+    <string name="tieÍnvoiceCreationTelefono">Teléfono:</string>
+    <string name="txtInvoiceCreationFecha">Fecha</string>
+    <string name="tieInvoicecreationFeEmision">F.Emisión:</string>
+    <string name="tieInvoiceCreationFeVencimiento">F.Vencimiento:</string>
+    <string name="txtInvoiceCreationArticulos">Artículos</string>
+    <string name="btnInvoiceCreationArticulos">Añadir Articulo</string>
+    <string name="txtInvoiceCreationLabSubTotal">Subtotal:</string>
+    <string name="txtInvoiceCreationSubTotal">100</string>
+    <string name="tieFormatoFecha">YYYY-MM-DD</string>
+    <string name="tvInvoiceCreationImpuestos">Impuestos:</string>
+    <string name="tvInvoiceCreation">Total:</string>
+    <string name="tvListaArticulosLabPrecio">Precio:</string>
+    <string name="tvListaArticulosPrecio">20.1</string>
+    <string name="tvListaArticulosNombre">Zapato</string>
+    <string name="tvListaArticulosLabNombre">Nombre:</string>
+    <string name="txtInvoiceDetailsCliente">Cliente</string>
+    <string name="tieInvoiceDetailsNombre">Nombre:</string>
+    <string name="txtInvoiceDetailsLabNombre">Nombre:</string>
+    <string name="txtInvoiceDetailsLabEmail">Email:</string>
+    <string name="txtInvoiceDetailsLabTelefono">Teléfono:</string>
+    <string name="txtInvoiceDetailsFecha">Fecha</string>
+    <string name="txtInvoiceDetailsLabFeEmision">F.Emisión :</string>
+    <string name="txtInvoiceDetailsLabFeVencimiento">F.Vencimiento :</string>
+    <string name="txtIncoiceDetailsArticulos">Articulos</string>
+    <string name="txtInvoiceDetailsLabSubTotal">SubTotal:</string>
+    <string name="txtInvoiceDetailsLabImpuestos">Impuestos:</string>
+    <string name="txtInvoiceDetailsLabTotal">Total: </string>
+    <string name="rbInvoiceCreationPendiente">Pendiente</string>
+    <string name="rbInvoiceDetailsPagada">Pagada</string>
+    <string name="rbInvoiceDetailsVencida">Vencida</string>
+    <string name="InvoiceImpustos">21 %</string>
+    <string name="tvInvoiceCreationLabTelefono">Teléfono:</string>
+    <string name="tvInvoiceCreationLabEmail">Email:</string>
+    <string name="tvInvoiceCreationLabCliente">Cliente:</string>
+    <string name="tvInvoiceCreationfactura">Factura</string>
+    <string name="hInvoiceCreationIdFactura">Id de la Factura</string>
+    <string name="hInvoiceCreationIdCliente">Id del Cliente</string>
+    <string name="nombre">Nombre</string>
+
+</resources>

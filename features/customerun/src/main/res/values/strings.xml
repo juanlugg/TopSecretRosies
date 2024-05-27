@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="txtnombre_customer_list">Nombre</string>
+    <string name="txtcorreo_customer_list" translatable="false">Email</string>
+    <string name="txtapellidos_customer_list">Apellidos</string>
+    <string name="txv_customer_detail">DATOS PERSONALES</string>
+    <string name="txvnombre_customer_detail">Nombre :</string>
+    <string name="txvid_customer_detail" translatable="false">Id :</string>
+    <string name="txvdatoscontacto_customer_detail">DATOS CONTACTO</string>
+    <string name="txvemail_customer_detail" translatable="false">Email :</string>
+    <string name="txvtelefono_customer_detail" >Teléfono :</string>
+    <string name="txvubicaion_customer_detail">UBICACIÓN</string>
+    <string name="txvciudad_customer_detail">Ciudad :</string>
+    <string name="txvdireccion_customer_detail" >Dirección :</string>
+    <string name="tie_nombre_customer_creation">Nombre</string>
+    <string name="tie_apellidos_customer_creation">Apellidos</string>
+    <string name="tie_correo_customer_creation">Correo electrónico</string>
+    <string name="tie_telfono_customer_creation">Teléfono</string>
+    <string name="tie_ciudad_customer_creation">Ciudad</string>
+    <string name="tie_direccion_customer_creation">Dirección</string>
+    <string name="btn_crear_customer_creation">Guardar/Crear</string>
+    <string name="txt_customercreation">Lista vacia\n</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nav_graph_invoice"
+    app:startDestination="@id/invoiceListFragment">
+
+    <fragment
+        android:id="@+id/invoiceCreationFragment"
+        android:name="com.moronlu18.invoice.ui.InvoiceCreationFragment"
+        android:label="@string/title_invoicecreation" />
+    <fragment
+        android:id="@+id/invoiceListFragment"
+        android:name="com.moronlu18.invoice.ui.InvoiceListFragment"
+        android:label="@string/title_invoicelist" >
+        <action
+            android:id="@+id/action_invoiceListFragment_to_invoiceDetailsFragment"
+            app:destination="@id/invoiceDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+            <!--app:enterAnim="@android:anim/linear_interpolator"--> />
+        <action
+            android:id="@+id/action_invoiceListFragment_to_invoiceCreationFragment"
+            app:destination="@id/invoiceCreationFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+            <!--app:enterAnim="@android:anim/bounce_interpolator"--> />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceDetailsFragment"
+        android:name="com.moronlu18.invoice.ui.InvoiceDetailsFragment"
+        android:label="@string/title_invoicedetail" />
+</navigation>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name" translatable="false">Invoice</string>
+
+    <string name="title_accountsigin">Inicio Sesión</string>
+    <string name="title_accountsignup">Registro</string>
+    <string name="title_customercreation">Creación Cliente</string>
+    <string name="title_firebase" translatable="false">Firebase</string>
+    <string name="title_printer" translatable="false">Printer</string>
+    <string name="title_customerdetail">Detalle Cliente</string>
+    <string name="title_customerlist">Lista Clientes</string>
+    <string name="title_invoicecreation">Creación Factura</string>
+    <string name="title_ui">Interfaz Gráfica</string>
+    <string name="title_utils">Uitlidades</string>
+    <string name="title_accounts">Cuentas</string>
+    <string name="title_invoicedetail">Detalle de Factura</string>
+    <string name="title_invoicelist">Lista de Facturas</string>
+    <string name="title_itemcreation">Creación de producto</string>
+    <string name="title_itemdetail">Detalle de Producto</string>
+    <string name="title_itemlist">Lista de productos</string>
+    <string name="title_taskcreation">Creación de tarea</string>
+    <string name="title_taskdetail">Detalle de tarea</string>
+    <string name="title_tasklist">Lista de tareas</string>
+
+
+    <string name="btSignUp">Registro</string>
+    <string name="mainFragment">Pantalla Inicial</string>
+    <string name="btCustomerCreation">Creacion
+        Cliente</string>
+    <string name="CustomerList">Lista
+        Cliente</string>
+    <string name="btInvoiceList">Lista
+        Factura</string>
+    <string name="ItemList">Lista
+        Articulo</string>
+    <string name="btTaskList">Lista
+        Tarea</string>
+    <string name="list_customer">Orden de Clientes</string>
+    <string name="key_customer_order" translatable="false">customer_order</string>
+    <string name="list_item">Orden de Productos</string>
+    <string name="key_item_order" translatable="false">order_item</string>
+    <string name="key_ivoice_order" translatable="false">order_invoice</string>
+    <string name="list_invoice">Orden de Facturas</string>
+    <string name="key_task_order" translatable="false">order_task</string>
+    <string name="list_task">Orden de Tareas</string>
+    <string name="theme">Tema</string>
+    <string name="languaje">Idioma [Proximamente]</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="btSignIn">Inicio de sesión</string>
+    <string name="theme_dark">Tema oscuro</string>
+    <string name="english">Inglés</string>
+    <string name="Order">Ordenación</string>
+</resources>
